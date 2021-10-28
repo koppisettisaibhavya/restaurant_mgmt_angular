@@ -1,0 +1,15 @@
+.btn1{
+    background-color: rgba(71, 3, 17, 0.979);
+    color:white;
+    font-size: 15px;
+    width:80px;
+    padding: 2px;
+    border-radius: 50px;
+}
+.btn1:hover{
+    background-color: blue;
+    color:white;
+}
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1
+}

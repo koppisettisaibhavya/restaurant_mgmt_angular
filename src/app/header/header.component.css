@@ -1,0 +1,73 @@
+.navbar-brand ,.navbar-brand :hover{
+    /* font-size: 3rem; */
+    color:black;
+}
+.navbar-nav{
+    color:black;
+}
+.nav-link{
+    color:black;
+    margin-right: 25px;
+}
+ .nav-link:hover,.foodcateg a:hover,.foodcateg a:link,.foodcateg a:visited,.select{
+    color:black;
+    font-size: 1.05rem;
+    border-bottom: 3px solid rgba(71, 3, 17, 0.979);;
+    
+} 
+a,.unselect{
+    text-decoration: none;
+    border-bottom: white;
+    color:black;
+    cursor:pointer;
+    font-size: 18px;
+}
+
+
+.btn1{
+    border-bottom:3px solid rgba(71, 3, 17, 0.979);
+    font-size: 18px;
+    height:20px;
+    width:60px;
+    /* padding: 4px; */
+    border-radius: 12px;
+}
+.btn1{
+    background-color: rgba(71, 3, 17, 0.979);
+    color:white;
+    font-size: 15px;
+    width:80px;
+    padding: 2px;
+    border-radius: 50px;
+}
+.btn1:hover,.btn2:hover{
+    background-color: blue;
+    color:white;
+}
+.tit{
+    
+    font-size:16px;
+    
+    color:white;
+}
+.bar{
+    width:100%;
+    background-color:rgba(71, 3, 17, 0.979) ;
+}
+.btn2{
+    background-color: white;
+    color:rgba(71, 3, 17, 0.979);
+    font-size: 17px;
+    width:120px;
+    padding: 5px;
+    margin-right:80px;
+    border-radius: 50px;
+}
+.btn2:hover,.btn2:hover{
+    background-color: blue;
+    color:white;
+}
+i{
+    color:white;
+    font-size: 30px;;
+}

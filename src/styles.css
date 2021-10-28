@@ -1,1 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    padding:0%;
+    margin: 0%;
+    box-sizing:border-box;
+    color:black
+}
+
+/* .cor1{
+    background-image: url(skysea.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    width:100%;
+    height: 500px;
+} */
+
+.btn1{
+    background-color: rgba(71, 3, 17, 0.979);
+    color:white;
+    font-size: 15px;
+    width:100px;
+    padding: 2px;
+    border-radius: 50px;
+}
+.btn1:hover{
+    background-color: rgba(214, 16, 59, 0.795);
+}
+
+img{
+    overflow: hidden;
+    width:100%;
+    height: 100%;
+    transition:all 0.7s
+}
+img:hover{
+    transform: scale(1.025);
+    transition:all 0.7s
+}
+.carousel img{
+    height:500px;
+
+}
+ .foot,.f{
+    background-color: rgba(71, 3, 17, 0.979);
+    color:white;
+
+} 
+.foot h1,.f h5,.f p{
+    color:white;
+}
+a{
+    text-decoration: none;
+    color:black;
+    cursor:pointer;
+}
+.carousel-caption h1,.carousel-caption p{
+    color:white;
+    font-weight: 700;
+}
+.eat{
+   
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    width:100%;
+    height: 400px;
+}
+.nav-link:hover,.foodcateg a:hover,.foodcateg a:links{
+    color:black;
+    font-size: 1.05rem;
+    border-bottom: 3px solid purple;
+    /* border-color: blue; */
+}

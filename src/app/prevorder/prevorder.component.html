@@ -1,0 +1,40 @@
+<div class="container mt-5 c1">
+    <h2 class="text-center mt-5" style="color:rgba(71, 3, 17, 0.979);">Previous Orders</h2>
+    <h6 class="text-center m-5" *ngIf="list1.length==0">No Previous Orders</h6>
+    <div class="container mt-3" *ngFor="let row of list1">
+        <h6>{{row.date}}</h6>
+        <table  class="table table-bordered mt-5" id="dataTable" width="100%">
+            <thead>
+                <tr>
+                    <!-- <th>ID</th> -->
+                    <th>name</th>
+                    <th>qty</th>
+                    <th>price</th>
+                    <th>cost</th>
+                </tr>
+            </thead>
+
+
+            <tbody>
+                <tr *ngFor="let o of row.order">
+                    <!-- <td>{{stud._id}}</td> -->
+                    <td>{{o.name}}</td>
+                    <td>{{o.qty}}</td>
+                    <td>{{o.price}}</td>
+                    <td>{{o.cost}}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Total:</th>
+                    <td></td>
+                    <td></td>
+                    <td *ngIf="list1.length>0">{{row.total}}</td>
+
+                </tr>
+            </tfoot>
+
+        </table>
+    </div>
+
+</div>

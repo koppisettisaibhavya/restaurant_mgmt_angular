@@ -1,0 +1,53 @@
+<header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <img style="height:70px;width:40px;" src="../assets/img/spoon.jpg">
+        <span style="font-family: 'Festive', cursive;font-size:40px;color:rgba(71, 3, 17, 0.979);">GoldenSpoon</span>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2  mb-lg-0">
+            <li class="nav-item" >
+              <a class="nav-link active" routerLink="" (click)="func(1)" [ngClass]="{'select':id[0]==1,'unselect':id[0]==0}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/aboutus" (click)="func(2)" [ngClass]="{'select':id[1]==1,'unselect':id[1]==0}">AboutUs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/categories" (click)="func(3)" [ngClass]="{'select':id[2]==1,'unselect':id[2]==0}">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/contactus" (click)="func(4)" [ngClass]="{'select':id[3]==1,'unselect':id[3]==0}">ContactUs</a>
+            </li>
+            <li class="nav-item" *ngIf="!adminserv.isAdmin">
+              <a class="nav-link" routerLink="/prevorders" (click)="func(5)" [ngClass]="{'select':id[4]==1,'unselect':id[4]==0}">PrevOrders</a>
+            </li>
+            
+          </ul>
+          <form class="d-flex">
+            <button routerLink="/register" style="height:30px" class="btn btn1 btn-sm" >SignIn</button>
+            <button routerLink="/login" style="height:30px" class="btn btn1 btn-sm mx-1" >LogIn</button>
+            <button *ngIf="adminserv.islogged&&!adminserv.isAdmin" routerLink="/orders" class="btn btn1 btn-xs mx-1" style="height:30px">MyOrder</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    
+    <div *ngIf="adminserv.islogged" class="d-flex flex-row-reverse bd-highlight bar">
+      <div class="p-2 bd-highlight "> <button (click)="logout()" class="btn btn-lg"><i class="fas fa-sign-out-alt"></i></button>
+      </div>
+      <div *ngIf="adminserv.isAdmin" class="p-2 bd-highlight "><span class="tit p-2 pt-3">LoggedIn as  {{adminserv.username}}  - Admin</span></div>
+      <div *ngIf="!adminserv.isAdmin" class="p-2 bd-highlight"><span class="tit p-2 pt-3">LoggedIn as  {{adminserv.username}}  - Customer</span>
+        </div>
+      <div class="p-2 bd-highlight "><button routerLink="/item-list" class="btn btn2">View All Items</button></div>
+      
+    </div>
+    <div *ngIf="!adminserv.islogged" class=" bd-highlight bar p-2">
+      <div  class="p-2 bd-highlight "><p class="tit text-center">SignIn / LogIn to explore items</p></div>
+      
+    </div>
+  </header>
+  

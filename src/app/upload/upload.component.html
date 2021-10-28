@@ -1,0 +1,77 @@
+<div class="c1 mb-5" style="background-image: url(../assets/img/login.jpg);">
+    <div class="container c1 py-5 " >
+        
+        <div class="row  mx-3 mt-5 p-2" >
+            <div class="col-lg-8 col-sm-12 m-auto login1" data-aos="fade-down">
+                <div class="row p-3">
+                    <div class="col-lg-12 col-sm-12">
+                        <h1 class="text-center">Upload Item</h1>
+                    </div>
+                </div>
+        <form [formGroup]="uploadform" (ngSubmit)="upload()">
+            <div class="row pt-2">
+                <div class="col-lg-10 col-sm-12 m-auto">
+                    <label for="" >FoodItem name</label>
+                    <input type="text" class="form-control" formControlName="item_name">
+                </div>
+            </div>
+            <div class="row pt-2">
+                <div class="col-lg-10 col-sm-12 m-auto">
+                    <label for="" >type of item</label>
+                    <select class="form-control" formControlName="item_type">
+                        <option selected disabled value="">Choose...</option>
+                        <option value="Tiffin">Tiffin</option>
+                        <option value="Meals">Meals</option>
+                        <option value="Snacks">Snacks</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-lg-10 col-sm-12 m-auto">
+                    <label for="" >Qty available</label>
+                    <input type="number" class="form-control" formControlName="qty_avail">
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-lg-10 col-sm-12 m-auto">
+                    <label for="" >price in rupees</label>
+                    <input type="text" class="form-control" formControlName="price">
+                </div>
+            </div>  
+            <div class="row pt-3">
+                <div class="col-lg-10 col-sm-12 m-auto">
+                    <label for="">Description</label>
+                    <textarea class="form-control" rows="5" cols="10" formControlName="desc"></textarea>
+                </div>
+            </div>
+    
+            <div class="row pt-3">
+                <div class="col-lg-10 col-sm-12 m-auto">
+                    <label for="" >Image of item</label>
+                    <input type="file" (change)="selectFile($event)" formControlName="img"> 
+                </div>
+            </div>
+            <div class="row pt-2">
+                <div class="col-lg-10 col-sm-12 m-auto">
+                    <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-lg-10 col-sm-12 m-auto">
+                    <div class="p-2"><img [src]="url" *ngIf="url" style="height:100px;width: 100px;"></div> 
+                </div>
+            </div>
+            
+            <div class="row pb-2">
+                <div class="col-lg-12 m-auto text-center">
+                    <input class="btn btn-primary" type="submit" value="Upload">
+                </div>
+            </div>
+        </form>        
+                
+            </div>
+        </div>
+        
+    </div>
+</div>
+

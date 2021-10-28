@@ -1,0 +1,61 @@
+<!-- <img src="../assets/img/login.jpg"> -->
+<div class="c1" style="background-image: url(../assets/img/login.jpg);">
+    <div class="container c1 py-5 ">
+        <div class="row  mx-3 mt-5 p-2">
+            <div class="col-lg-8 col-sm-12 m-auto login1" data-aos="fade-down">
+                <form class="m-5" [formGroup]="loginform" (ngSubmit)="login_submit()">
+                    <div class="row p-3">
+                        <div class="col-lg-12 col-sm-12">
+                            <h1 class="text-center">Login</h1>
+                        </div>
+                    </div>
+                    <div class="row pt-2">
+                        <div class="col-lg-10 col-sm-12 m-auto">
+                            <label for="">Email</label>
+                            <input type="email" class="form-control" id="" formControlName="email"
+                                [ngClass]="{'border border-danger':loginform.controls.email.touched&&loginform.controls.email.invalid,
+                                'border border-success':loginform.controls.email.touched&&loginform.controls.email.valid}">
+                            <span style="color:red"
+                                *ngIf="loginform.controls.email.touched&&loginform.controls.email.invalid">Please enter
+                                email</span>
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="col-lg-10 col-sm-12 m-auto">
+                            <label for="">Password</label>
+                            <input type="password" class="form-control" id=""
+                                [ngClass]="{'border border-danger':loginform.controls.password.touched&&loginform.controls.password.invalid,
+                                'border border-success':loginform.controls.password.touched&&loginform.controls.password.valid}" formControlName="password">
+                            <span style="color:red"
+                                *ngIf="loginform.controls.password.touched&&loginform.controls.password.invalid">Please
+                                enter password</span>
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="col-lg-10 m-auto">
+                            <label>
+                                <input type="radio" value="Admin" formControlName="check">
+                                <span>Admin</span>
+                            </label>
+                            <label class="px-3">
+                                <input type="radio"  value="User" formControlName="check">
+                                <span>User</span>
+                            </label>
+                            <p style="color:red"
+                                *ngIf="loginform.controls.check.touched&&loginform.controls.check.invalid">Please
+                                enter
+                                valid dob</p>
+                        </div>
+                    </div>
+                    <div class="row  p-5">
+                        <div class=" col-lg-12 m-auto text-center">
+                            <input class="btn btn-primary" type="submit" value="Login">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>

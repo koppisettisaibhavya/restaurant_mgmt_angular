@@ -1,0 +1,16 @@
+ 
+.c1{
+    height: 1000px;
+    background-size: 100% 100%;
+background-repeat: no-repeat;
+background-attachment: relative;
+background-position: center;
+}
+.login1{
+    font-family: 'Pacifico', cursive;
+    background-color:white;
+    border-radius: 20px;
+    box-shadow: 11px 24px 22px 1px rgba(0,0,0,0.76);
+    -webkit-box-shadow: 11px 24px 22px 1px rgba(0,0,0,0.76);
+    -moz-box-shadow: 11px 24px 22px 1px rgba(0,0,0,0.76);
+}

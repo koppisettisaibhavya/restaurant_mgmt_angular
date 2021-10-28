@@ -1,0 +1,50 @@
+<!-- <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+    <thead>
+        <tr>
+            <!-- <th>ID</th> -->
+            <!-- <th>name</th>
+            <th>type</th>
+            <th>qty</th>
+            <th>price</th>
+            <th>img</th>
+            
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <!-- <th>ID</th> -->
+            <!-- <th>name</th>
+            <th>type</th>
+            <th>qty</th>
+            <th>price</th>
+            <th>img</th>
+            
+        </tr>
+    </tfoot>
+
+    <tbody>
+        <tr *ngFor="let item of item_list">
+            <!-- <td>{{stud._id}}</td> -->
+            <!-- <td>{{item.item_name}}</td>
+            <td>{{item.item_type}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.qty_avail}}</td>
+            <td><img [src]=item.img style="height:100px;width: 100px;"></td>
+            
+            
+            
+        </tr>                            
+        </tbody>
+
+</table>  -->
+
+<div *ngIf="adminserv.isAdmin&&adminserv.islogged">
+    <app-tiffin></app-tiffin>
+    <app-meal></app-meal>
+    <app-snack></app-snack>
+</div>
+<div *ngIf="!adminserv.isAdmin&&adminserv.islogged">
+    <app-tiffin1></app-tiffin1>
+    <app-meal1></app-meal1>
+    <app-snack1></app-snack1>
+</div>

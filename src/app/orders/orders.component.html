@@ -1,0 +1,40 @@
+<div *ngIf="adminserv.islogged" class="container-fluid mt-5 c1">
+    <h2 class="text-center mt-5" style="color:rgba(71, 3, 17, 0.979);">My Order Details</h2>
+    <h6 class="text-center m-5" *ngIf="list1.length==0">No orders so far...</h6>
+    <table *ngIf="list1.length>0" class="table table-bordered mt-5" id="dataTable" width="100%"  >
+        <thead>
+            <tr>
+                <!-- <th>ID</th> -->
+                <th>name</th>
+                <th>qty</th>
+                <th>price</th>
+                <th>cost</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        
+    
+        <tbody>
+            <tr *ngFor="let item of list1;let i=index">
+                <!-- <td>{{stud._id}}</td> -->
+                <td>{{item.name}}</td>
+                <td>{{item.qty}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.cost}}</td>     
+                <td><button class="btn btn-danger btn-sm m-2" (click)="removeItem(i)"><i class="far fa-trash-alt"></i></button></td>              
+            </tr>                            
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Total:</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td *ngIf="list1.length>0">{{list1[list1.length-1].total}}</td>
+                    
+                </tr>
+            </tfoot>
+    
+    </table>
+    <button *ngIf="list1.length>0" routerLink="/finalorder" class="btn btn1 mb-3">FinalizeOrder</button>
+</div>

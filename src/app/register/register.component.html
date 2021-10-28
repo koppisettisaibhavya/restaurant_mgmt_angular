@@ -1,0 +1,80 @@
+<div class="c1 pt-5" style="background-image: url(../assets/img/login.jpg);">
+
+
+    <div class="container  p-5 ">
+        
+        <form [formGroup]="registerForm" (ngSubmit)="register_submit()">
+            <div class="row mt-5">
+                <div class="col-lg-8 col-sm-12 m-auto login1" data-aos="fade-down">
+                    <h1 class="text-center">SignUp</h1>
+                    <div class="row m-5">
+                        <div class="col-lg-12">
+                            <label for="" class="form-label">Email</label>
+                            <input type="email" [ngClass]="{'border border-danger':registerForm.controls.email.touched&&registerForm.controls.email.invalid,
+                            'border border-success':registerForm.controls.email.valid}" class="form-control"
+                                formControlName="email">
+                            <span style="color:red"
+                                *ngIf="registerForm.controls.email.touched&&registerForm.controls.email.invalid">Please
+                                enter valid
+                                email</span>
+                        </div>
+                        <div class="col-lg-12">
+                            <label for="" class="form-label">DateofBirth</label>
+                            <input type="date" [ngClass]="{'border border-danger':registerForm.controls.dob.touched&&registerForm.controls.dob.invalid,
+                            'border border-success':registerForm.controls.dob.valid}" class="form-control"
+                                formControlName="dob">
+                            <p style="color:red"
+                                *ngIf="registerForm.controls.dob.touched&&registerForm.controls.dob.invalid">Please
+                                enter
+                                valid dob</p>
+                        </div>
+                    </div>
+                    <div class="row  m-5">
+                        <div class="col-lg-12">
+                            <label for="" class="form-label">Password</label>
+                            <input type="password" class="form-control" [ngClass]="{'border border-danger':registerForm.controls.password.touched&&registerForm.controls.password.invalid,
+                            'border border-success':registerForm.controls.password.valid}" formControlName="password">
+                            <p style="color:red"
+                                *ngIf="registerForm.controls.password.touched&&registerForm.controls.password.invalid">
+                                Please enter
+                                valid password</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <label for="" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id=""
+                                [ngClass]="{'border border-danger':(registerForm.controls.cpassword.touched&&registerForm.controls.cpassword.invalid)||registerForm.value['cpassword']!=registerForm.value['password']||(registerForm.controls.cpassword.touched&&registerForm.value['cpassword']==0),
+                            'border border-success':registerForm.controls.password.valid&&registerForm.value['cpassword']==registerForm.value['password']}"
+                                formControlName="cpassword">
+
+                            <p style="color:red"
+                                *ngIf="(registerForm.controls.cpassword.touched&&registerForm.controls.cpassword.invalid)||registerForm.value['cpassword']!=registerForm.value['password']||(registerForm.controls.cpassword.touched&&registerForm.value['cpassword']==0)">
+                                Password doesn't match
+                            </p>
+                        </div>
+                        <div class="col-lg-12">
+                            <label>
+                                <input type="radio" value="Admin" formControlName="check">
+                                <span>Admin</span>
+                            </label>
+                            <label>
+                                <input type="radio" value="User" formControlName="check">
+                                <span>User</span>
+                            </label>
+                            <p style="color:red"
+                                *ngIf="registerForm.controls.check.touched&&registerForm.controls.check.invalid">Please
+                                enter
+                                valid dob</p>
+                        </div>
+                    </div>
+                    <div class="row m-5">
+                        <div class="col">
+                            <input type="submit" class="btn btn-primary" value="Register">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</div>
